@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script>
+
+        window.onload =oppstart;
+
+        function oppstart() {
+            document.getElementById("knapp").onclick=endreHtml;
+            document.getElementById("knapp1").onclick=endreCss;
+            document.getElementById("paa").onclick=endreAttributt;
+            document.getElementById("av").onclick=endreAttributt2;
+            document.getElementById("knapp2").onclick=skjuleHtml;
+            document.getElementById("skjult").style.display="none";
+            document.getElementById("knapp3").onclick=visHtml;
+            document.getElementById("bilde").onmluseenter=stort_bilde;
+            document.getElementById("bilde").onmouseleave=lite_bilde;
+        }
+
+        function endreHtml()   {
+            document.getElementById("demo").innerHTML="Som du ser! Når man trykker på knappen endres innhold i HTML-elementet";
+        }
+
+        function endreCss()    {
+            document.getElementById("demo2").style.fontSize="35px";
+        }
+
+        function endreAttributt() {
+        document.getElementById("demo3").src="lyspere.jpg";
+        }
+
+        function endreAttributt2()  {
+        document.getElementById("demo3").src="lyspere_av.jpg";
+        }
+
+        function skjuleHtml()  {
+        document.getElementById("demo4").style.display="none";
+        document.getElementById("knapp2").style.display="none";
+        }
+
+        function visHtml()  {
+        document.getElementById("skjult").style.display="block";
+        }
+
+        function stort_bilde()  {
+        document.getElementById("bilde").style.width="300px";
+        }
+
+        function lite_bilde()  {
+        document.getElementById("bilde").style.width="100px";
+        }
+
+    </script>
+    </head>
+    <body>
+
+        <h1>Gå tilbake</h1>
+        <form action="index.html">
+            <button type="submit">Klikk meg</button>
+        <hr>
+        <h1>Hva kan Javascript gjøre?</h1>
+        <hr>
+        <p id="demo">JavaScript kan endre innholdet i HTML.</p>
+        <button type="button" id="knapp">Klikk meg</button>
+        <hr>
+        <p id="demo2">JavaScript kan også endre utseende på HTML-elementet (css).</p>
+        <button type="button" id="knapp1">Klikk meg</button>
+        <hr>
+        <p>JavaScript kan også endre attributter på HTML-elementet (feks som her kilden til en img-tag). </p>
+        <img id="demo3" src="lyspere.jpg" style="width:300px">
+        <button type="button" id="paa">På</button>
+        <button type="button" id="av">Av</button><br><br>
+        <p>Et annet eksempel: (før musepekeren over elementet (bildet)</p>
+        <img id="bilde" src="lyspere.jpg" style="width:100px">
+        <hr>
+        <p id="demo4">JavaScript kan også skjule et HTML-element.</p>
+        <button type="button" id="knapp2">Klikk meg</button>
+        <hr>
+        <p id="demo4">JavaScript kan også vise skjulte HTML-elementer.</p>
+        <p id="demo4">Dette HTML-elementet var i utgangspunktet skjult!</p>
+        <button type="button" id="knapp3">Klikk meg</button>
+
+
+
+
+
+    </body>
+</html>
